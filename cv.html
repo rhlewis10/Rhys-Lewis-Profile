@@ -165,7 +165,8 @@ a { color: var(--accent); text-decoration: none; }
 <body>
 
 <div class="dl-bar no-print">
-  <div class="dl-bar-title">Rhys Lewis</div>
+  <a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" class="dl-bar-title" style="text-decoration:none;color:var(--text)">Rhys Lewis</a>
+  <div style="display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:.75rem"><a href="cv.html" style="font-size:.75rem;font-weight:600;padding:4px 8px;border-radius:3px;color:var(--accent);background:rgba(1,118,211,0.06);text-decoration:none">EN</a><span style="font-size:.75rem;color:var(--border)">|</span><a href="cv-fr.html" style="font-size:.75rem;font-weight:600;padding:4px 8px;border-radius:3px;color:var(--text-3);text-decoration:none">FR</a></div>
   <div class="dl-hamburger" onclick="this.classList.toggle('open');document.querySelector('.dl-bar-actions').classList.toggle('open')">
     <span></span><span></span><span></span>
   </div>
@@ -173,8 +174,7 @@ a { color: var(--accent); text-decoration: none; }
     <a href="index.html" class="dl-btn-s">Career Impact</a>
     <a href="mailto:rhlewis@gmail.com" class="dl-btn-s">Email</a>
     <a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" class="dl-btn-s">LinkedIn</a>
-    <button class="dl-btn" onclick="window.print()">Download PDF</button>
-    <div style="display:flex;align-items:center;gap:2px;margin-left:4px"><a href="cv.html" style="font-size:.75rem;font-weight:600;padding:4px 8px;border-radius:3px;color:var(--accent);background:rgba(1,118,211,0.06);text-decoration:none">EN</a><span style="font-size:.75rem;color:var(--border)">|</span><a href="cv-fr.html" style="font-size:.75rem;font-weight:600;padding:4px 8px;border-radius:3px;color:var(--text-3);text-decoration:none">FR</a></div>
+    <button class="dl-btn" onclick="window.print()">PDF</button>
   </div>
 </div>
 
