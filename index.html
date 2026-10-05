@@ -7,12 +7,18 @@
 <meta property="og:title" content="Rhys Lewis | Career Impact">
 <meta property="og:description" content="Strategic Solution Engineer | Global Accounts | Director-level Individual Contributor. $55M+ closed-won ACV across Financial Services, Consumer Goods and Life Sciences.">
 <meta property="og:type" content="profile">
+<meta property="og:image" content="https://rhyslewisprofile.vercel.app/og.jpg">
+<meta property="og:url" content="https://rhyslewisprofile.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://rhyslewisprofile.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://rhyslewisprofile.vercel.app/">
+<link rel="alternate" hreflang="fr" href="https://rhyslewisprofile.vercel.app/fr">
+<link rel="alternate" hreflang="x-default" href="https://rhyslewisprofile.vercel.app/">
 <title>Rhys Lewis | Career Impact</title>
-<script>try{if(!sessionStorage.getItem('lang')&&/^fr/i.test(navigator.language||'')){sessionStorage.setItem('lang','fr');location.replace('index-fr.html')}}catch(e){}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>try{if(!localStorage.getItem('lang')&&/^fr/i.test(navigator.language||'')){localStorage.setItem('lang','fr');location.replace('/fr')}}catch(e){}</script>
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Inter';src:url('/fonts/inter-var.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
 :root {
   color-scheme: light;
   --bg: #FFFFFF;
@@ -22,7 +28,7 @@
   --border-light: #EEF0F3;
   --text: #0F172A;
   --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-muted: #64748B;
   --accent: #0176D3;
   --accent-deep: #014486;
   --accent-bg: rgba(1, 118, 211, 0.06);
@@ -49,7 +55,7 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .nav-cta:hover{background:var(--accent-deep);text-decoration:none !important}
 .nav-cv{font-size:.8125rem;font-weight:600;color:var(--text) !important;border:1px solid var(--border);padding:.375rem .875rem;border-radius:4px;transition:border-color .15s}
 .nav-cv:hover{border-color:var(--text-muted);text-decoration:none !important}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:0}
 .hamburger span{display:block;width:20px;height:2px;background:var(--text);border-radius:1px;transition:transform .2s,opacity .2s}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hamburger.open span:nth-child(2){opacity:0}
@@ -229,7 +235,8 @@ section{padding:var(--2xl) 0}
 
   /* Layout reset */
   .c{max-width:100%;padding:0}
-  section{padding:.75rem 0;break-inside:avoid}
+  section{padding:.75rem 0}
+  .win-hero,.win,.win-beat{break-inside:avoid}
 
   /* Hero */
   .hero{padding-top:0;padding-bottom:.5rem}
@@ -337,21 +344,21 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
 
 <nav class="nav">
   <div class="nav-in">
-    <a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" class="nav-brand" style="text-decoration:none;color:var(--text)">Rhys Lewis</a>
+    <a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" rel="noopener" class="nav-brand" style="text-decoration:none;color:var(--text)">Rhys Lewis</a>
     <ul class="nav-links">
       <li><a href="#wins">Wins</a></li>
       <li><a href="#leverage">Impact</a></li>
       <li><a href="#operate">Leadership</a></li>
       <li><a href="#career">Career</a></li>
-      <li><a href="cv.html">CV</a></li>
+      <li><a href="/cv">CV</a></li>
       <li><a href="#" onclick="window.print();return false;">PDF</a></li>
-      <li><a href="https://www.linkedin.com/in/rhyshlewis" target="_blank">LinkedIn</a></li>
-      <li><div class="lang-toggle"><a href="index.html" class="active">EN</a><span class="sep">|</span><a href="index-fr.html">FR</a></div></li>
+      <li><a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><div class="lang-toggle"><a href="/" class="active">EN</a><span class="sep">|</span><a href="/fr">FR</a></div></li>
     </ul>
-    <div class="nav-mobile-lang lang-toggle" style="display:none;margin-left:auto;margin-right:var(--sm)"><a href="index.html" class="active">EN</a><span class="sep">|</span><a href="index-fr.html">FR</a></div>
-    <div class="hamburger" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+    <div class="nav-mobile-lang lang-toggle" style="display:none;margin-left:auto;margin-right:var(--sm)"><a href="/" class="active">EN</a><span class="sep">|</span><a href="/fr">FR</a></div>
+    <button type="button" class="hamburger" aria-label="Menu" aria-expanded="false" onclick="var o=this.classList.toggle('open');this.setAttribute('aria-expanded',o);document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
 </nav>
 
@@ -364,7 +371,7 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
         <p class="hero-role">Strategic Solution Engineer | Global Accounts | Director-level Individual Contributor</p>
         <p class="hero-stmt">Director-level Strategic Solution Engineer connecting executive transformation strategy with enterprise technology and complex deal execution across Financial Services, Consumer Goods and Life Sciences.</p>
       </div>
-      <img src="photo.png" alt="Rhys Lewis" class="hero-photo">
+      <img src="/photo-v1.webp" alt="Rhys Lewis" class="hero-photo" width="140" height="140" decoding="async">
     </div>
     <div class="hero-metrics">
       <div class="hero-metric">
@@ -677,7 +684,7 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
         <span class="cv-info-meta">19 years in enterprise technology | Financial Services | Consumer Goods | Healthcare &amp; Life Sciences</span>
       </div>
       <div class="cv-btns">
-        <a href="cv.html" class="bp" target="_blank">View CV</a>
+        <a href="/cv" class="bp" target="_blank" rel="noopener">View CV</a>
       </div>
     </div>
   </div>
@@ -691,7 +698,7 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
 (function(){
   'use strict';
   document.documentElement.classList.add('js');
-  try{sessionStorage.setItem('lang','en')}catch(e){}
+  try{localStorage.setItem('lang','en')}catch(e){}
   var els=document.querySelectorAll('.rv');
   var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
   els.forEach(function(el){ro.observe(el)});
@@ -699,7 +706,7 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
   var no=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var id=e.target.getAttribute('id');links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+id)})}})},{threshold:.2,rootMargin:'-60px 0px -50% 0px'});
   secs.forEach(function(s){no.observe(s)});
   /* Close hamburger menu on nav link click */
-  document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.hamburger').classList.remove('open');document.querySelector('.nav-links').classList.remove('open')})});
+  document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.hamburger').classList.remove('open');document.querySelector('.hamburger').setAttribute('aria-expanded','false');document.querySelector('.nav-links').classList.remove('open')})});
   /* Open all case studies before print, close after */
   window.addEventListener('beforeprint',function(){document.querySelectorAll('.win-expand').forEach(function(d){d.setAttribute('open','')})});
   window.addEventListener('afterprint',function(){document.querySelectorAll('.win-expand').forEach(function(d){d.removeAttribute('open')})});
