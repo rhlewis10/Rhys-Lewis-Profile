@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rhys Lewis | Strategic Solution Engineer | Global Accounts | Director-level Individual Contributor. Curriculum Vitae.">
+<meta property="og:title" content="Rhys Lewis | Curriculum Vitae">
+<meta property="og:description" content="Strategic Solution Engineer | Global Accounts | Director-level Individual Contributor. 19 years in enterprise technology.">
+<meta property="og:type" content="profile">
+<title>Rhys Lewis | Curriculum Vitae</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --bg-subtle: #F8F9FB;
+  --border: #E2E5EA;
+  --text: #0F172A;
+  --text-2: #475569;
+  --text-3: #94A3B8;
+  --accent: #0176D3;
+  --accent-bg: rgba(1, 118, 211, 0.06);
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; letter-spacing: -0.011em; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+
+.page { max-width: 820px; margin: 0 auto; padding: 3rem 2rem; }
+
+/* HEADER */
+.cv-header { display: grid; grid-template-columns: 1fr auto; gap: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.cv-name { font-size: 2rem; font-weight: 800; letter-spacing: -0.035em; line-height: 1.1; }
+.cv-title { font-size: 1.0625rem; color: var(--text-2); font-weight: 500; margin-top: 0.25rem; }
+.cv-summary { font-size: 0.875rem; color: var(--text-2); margin-top: 0.5rem; line-height: 1.65; max-width: 100%; }
+.cv-contact { text-align: right; font-size: 0.8125rem; color: var(--text-2); display: flex; flex-direction: column; gap: 0.25rem; white-space: nowrap; }
+.cv-contact a { color: var(--accent); }
+
+/* SECTIONS */
+.cv-section { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+.cv-section:last-child { border-bottom: none; }
+.cv-section-title { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.625rem; }
+
+/* HIGHLIGHTS */
+.highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 0; }
+.hl { background: var(--bg); padding: 1rem; text-align: center; }
+.hl-n { font-size: 1.375rem; font-weight: 800; color: var(--accent); letter-spacing: -0.035em; }
+.hl-l { font-size: 0.6875rem; color: var(--text-2); font-weight: 500; margin-top: 0.1rem; }
+
+/* EXPERIENCE */
+.exp { margin-bottom: 1.375rem; }
+.exp:last-child { margin-bottom: 0; }
+.exp-header { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline; }
+.exp-role { font-size: 1rem; font-weight: 700; color: var(--text); }
+.exp-company { font-size: 0.875rem; font-weight: 600; color: var(--accent); margin-top: 0.1rem; }
+.exp-dates { font-size: 0.75rem; color: var(--text-2); font-weight: 500; text-align: right; white-space: nowrap; }
+.exp-location { font-size: 0.75rem; color: var(--text-3); text-align: right; }
+.exp-metrics { font-size: 0.8125rem; color: var(--accent); font-weight: 600; margin-top: 0.5rem; }
+.exp-desc { font-size: 0.8125rem; color: var(--text-2); margin-top: 0.5rem; line-height: 1.6; margin-bottom: 0.25rem; }
+.exp-bullets { list-style: none; margin-top: 0.5rem; }
+.exp-bullets li { font-size: 0.8125rem; color: var(--text-2); line-height: 1.55; padding-left: 1rem; position: relative; margin-bottom: 0.3rem; }
+.exp-bullets li::before { content: ''; position: absolute; left: 0.25rem; top: 0.55rem; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+/* AWARDS */
+.awards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.award-item { display: flex; gap: 0.5rem; align-items: baseline; }
+.award-name { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+.award-detail { font-size: 0.75rem; color: var(--text-3); }
+
+/* SKILLS & EDUCATION */
+.skills-wrap { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+.skill-chip { font-size: 0.75rem; font-weight: 500; color: var(--text-2); background: var(--accent-bg); padding: 0.2rem 0.6rem; border-radius: 2px; }
+
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.edu-item {}
+.edu-name { font-size: 0.875rem; font-weight: 600; color: var(--text); }
+.edu-sub { font-size: 0.75rem; color: var(--text-3); }
+
+.courses-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-top: 1rem; }
+.course { font-size: 0.8125rem; color: var(--text-2); }
+.course-provider { font-size: 0.6875rem; color: var(--text-3); }
+
+/* COMMERCIAL IMPACT GRID */
+.ci-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center; }
+
+/* LANGUAGES */
+.lang-grid { display: flex; gap: 2rem; }
+.lang { font-size: 0.875rem; color: var(--text); }
+.lang span { font-size: 0.75rem; color: var(--text-3); margin-left: 0.25rem; }
+
+/* PRINT FOOTER */
+.print-footer { display: none; }
+
+/* PRINT */
+@media print {
+  @page { size: A4; margin: 1.3cm 1.5cm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { font-size: 9pt; }
+  .page { padding: 0 !important; max-width: 100%; padding-top: 0 !important; }
+  .exp { break-inside: avoid; }
+  .award-item { break-inside: avoid; }
+  .no-print { display: none !important; }
+  header { break-inside: avoid; }
+  .print-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 7pt;
+    color: #94A3B8;
+    padding: 0.3cm 0;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .cv-header { grid-template-columns: 1fr; }
+  .cv-contact { text-align: left; margin-top: 0.5rem; flex-direction: row; flex-wrap: wrap; gap: 0.5rem; }
+  .exp-header { grid-template-columns: 1fr; }
+  .exp-dates, .exp-location { text-align: left; }
+  .awards-grid { grid-template-columns: 1fr; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .courses-grid { grid-template-columns: 1fr 1fr; }
+  .page { padding: 0 1rem !important; }
+  .dl-bar { padding: 0.5rem 1rem; }
+  .cv-name { font-size: 1.5rem; }
+  .cv-title { font-size: 0.875rem; }
+  .cv-summary { font-size: 0.8125rem; }
+  .ci-grid { grid-template-columns: repeat(3, 1fr); }
+  .career-metrics { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* NAV BAR */
+.dl-bar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+.dl-bar-title { font-size: 0.875rem; font-weight: 700; color: var(--text); }
+.dl-bar-actions { display: flex; gap: 0.75rem; }
+.dl-btn { font-size: 0.8125rem; font-weight: 600; color: #fff; background: var(--accent); padding: 0.375rem 1rem; border-radius: 4px; border: none; cursor: pointer; font-family: var(--font); }
+.dl-btn:hover { background: #014486; }
+.dl-btn-s { font-size: 0.8125rem; font-weight: 600; color: var(--text); background: transparent; padding: 0.375rem 1rem; border-radius: 4px; border: 1px solid var(--border); cursor: pointer; font-family: var(--font); text-decoration: none; }
+
+/* IMPACT STRIP */
+.strip { padding: 0.375rem 2rem; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); position: fixed; top: 46px; left: 0; right: 0; z-index: 90; }
+.strip-in { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; max-width: 820px; margin: 0 auto; }
+.strip-yr { font-weight: 700; font-size: 0.8125rem; color: var(--accent); white-space: nowrap; }
+.strip-items { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.strip-i { font-size: 0.6875rem; color: var(--text-2); }
+.strip-i strong { font-weight: 700; color: var(--text); margin-right: 0.2rem; }
+</style>
+</head>
+<body>
+
+<div class="dl-bar no-print">
+  <div class="dl-bar-title">Rhys Lewis</div>
+  <div class="dl-bar-actions">
+    <a href="index.html" class="dl-btn-s">Career Impact</a>
+    <button class="dl-btn" onclick="window.print()">Download PDF</button>
+    <div style="display:flex;align-items:center;gap:2px;margin-left:4px"><a href="cv.html" style="font-size:.75rem;font-weight:600;padding:4px 8px;border-radius:3px;color:var(--accent);background:rgba(1,118,211,0.06);text-decoration:none">EN</a><span style="font-size:.75rem;color:var(--border)">|</span><a href="cv-fr.html" style="font-size:.75rem;font-weight:600;padding:4px 8px;border-radius:3px;color:var(--text-3);text-decoration:none">FR</a></div>
+  </div>
+</div>
+
+
+<div class="page" style="padding-top: 6rem;">
+
+<!-- HEADER -->
+<header style="padding-bottom:1rem;border-bottom:1px solid var(--border)">
+  <h1 class="cv-name" style="font-size:1.75rem">Rhys Lewis</h1>
+  <div style="display:flex;gap:1.5rem;font-size:0.75rem;margin-top:0.1rem">
+    <a href="mailto:rhlewis@gmail.com">RHLewis@gmail.com</a>
+    <a href="https://www.linkedin.com/in/rhyshlewis">LinkedIn.com/in/RhysHLewis</a>
+  </div>
+  <p class="cv-title" style="margin-top:0.3rem;font-size:0.9375rem">Strategic Solution Engineer | Global Accounts | Director-level Individual Contributor</p>
+  <p class="cv-summary" style="margin-top:0.3rem">Director-level Strategic Solution Engineer with 19 years in enterprise technology and 8+ years at Salesforce, leading complex global pursuits across Financial Services, Consumer Goods and Life Sciences. Works across the full deal cycle, from C-suite business case and transformation strategy to enterprise architecture and technical validation. Combines executive engagement, value selling and MEDDPICC discipline across complex, multi-stakeholder decisions.</p>
+</header>
+
+<!-- SELECTED CAREER IMPACT -->
+<section class="cv-section" style="padding:1rem 0">
+  <div class="cv-section-title" style="margin-bottom:0.5rem">Career Impact at a Glance</div>
+  <div class="career-metrics" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
+    <div>
+      <div style="font-size:1.25rem;font-weight:800;color:var(--accent);letter-spacing:-0.035em">$55M+</div>
+      <div style="font-size:0.6875rem;color:var(--text-3)">Closed-Won Annual Contract Value (ACV)</div>
+    </div>
+    <div>
+      <div style="font-size:1.25rem;font-weight:800;color:var(--accent);letter-spacing:-0.035em">$45M+</div>
+      <div style="font-size:0.6875rem;color:var(--text-3)">Services Revenue</div>
+    </div>
+    <div>
+      <div style="font-size:1.25rem;font-weight:800;color:var(--accent);letter-spacing:-0.035em">530+</div>
+      <div style="font-size:0.6875rem;color:var(--text-3)">Deals</div>
+    </div>
+    <div>
+      <div style="font-size:1.25rem;font-weight:800;color:var(--accent);letter-spacing:-0.035em">100+</div>
+      <div style="font-size:0.6875rem;color:var(--text-3)">C-suite Engagements</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="cv-section">
+  <div class="cv-section-title">Experience</div>
+  <div class="exp-metrics" style="margin-bottom:1rem"><span style="color:var(--text)">Salesforce Impact:</span> $35M+ Closed-Won ACV · $30M+ Services · 330+ Deals · Chairman's Club</div>
+
+  <div class="exp">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">Strategic Solution Engineer | Global Accounts | Insurance</div>
+        <div class="exp-company">Salesforce | Financial Services</div>
+      </div>
+      <div>
+        <div class="exp-dates">April 2026 - Present</div>
+        <div class="exp-location">France</div>
+      </div>
+    </div>
+    <p class="exp-desc">Moved into Financial Services and Insurance to lead solution strategy across Salesforce's most strategically significant relationships in the sector.</p>
+    <ul class="exp-bullets">
+      <li>Lead solution strategy for global Financial Services accounts, connecting executive transformation priorities with platform strategy and enterprise architecture</li>
+      <li>Engage C-suite and senior technology leaders across complex, multi-stakeholder pursuits, applying MEDDPICC discipline throughout the deal cycle</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">Strategic Solution Engineer | Strategic Accounts</div>
+        <div class="exp-company">Salesforce | Consumer Goods | Healthcare &amp; Life Sciences</div>
+      </div>
+      <div>
+        <div class="exp-dates">Feb 2022 - Apr 2026</div>
+        <div class="exp-location">France</div>
+      </div>
+    </div>
+    <p class="exp-desc">Global Solution Engineer across four strategic accounts: a leading global consumer goods and tobacco company, a major global pharmaceutical company, a leading global food and beverage company, and a leading global pet nutrition brand. Director-level responsibility for complex enterprise solution strategy across EMEA.</p>
+    <ul class="exp-bullets">
+      <li>Turned a red strategic account into a landmark $25M enterprise agreement (SELA) at a leading global consumer goods and tobacco company through a two-year reset-and-renew strategy, orchestrating a cross-functional team across pre-sales, product and professional services from discovery through close, generating $5.1M combined ACV and $11M in services revenue</li>
+      <li>Engaged C-suite (CEOs, CIOs, Chief Supply Chain Officers) across a portfolio of strategic accounts simultaneously, translating platform capability into board-level investment decisions</li>
+      <li>Built and sustained technical champions who drove internal advocacy and shortened decision cycles through complex procurement</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">Principal Presales Consultant</div>
+        <div class="exp-company">Salesforce | Consumer Goods</div>
+      </div>
+      <div>
+        <div class="exp-dates">Jun 2018 - Feb 2022</div>
+        <div class="exp-location">London, UK</div>
+      </div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Built cross-functional teams to develop, validate, and execute sales motions for the UK Consumer Goods industry, leading to significant revenue growth</li>
+      <li>Created a value selling framework adopted as the go-to-market rhythm for Enterprise accounts, enabling 60+ people including Regional Vice Presidents, Account Executives, and Solution Engineers through structured workshops</li>
+      <li>Developed and delivered multiple industry go-to-market motions including practitioner training, innovation programmes, and solution engineering competency frameworks</li>
+      <li>Led executive engagement strategy for consumer goods companies, generating $20M+ in qualified pipeline across 35+ customer accounts</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">Pre-Sales Consultant to Principal Strategic Accounts Lead</div>
+        <div class="exp-company">BMC Software</div>
+      </div>
+      <div>
+        <div class="exp-dates">Jan 2013 - May 2018</div>
+        <div class="exp-location">UK / North EMEA</div>
+      </div>
+    </div>
+    <div class="exp-metrics">$20M+ ACV · $14M new-business licence revenue in single year · 200+ deals · 3 promotions in 4 years</div>
+    <ul class="exp-bullets">
+      <li>Strategic Accounts Pre-Sales Lead across full BMC portfolio for a worldwide team, focused on value architecture, MEDDPICC, and champion building</li>
+      <li>Led multi-million-dollar telecom win tied to £1M per day in customer savings on a government contract</li>
+      <li>Created multi-cloud strategic whiteboard and worldwide benchmarking program adopted into global sales enablement</li>
+      <li>EMEA Consultant of the Year (2016) · EMEA ITSM Pre-Sales of the Year (2014)</li>
+    </ul>
+  </div>
+
+  <p style="font-size:0.8125rem;color:var(--text-2);margin-top:1.25rem;line-height:1.6"><strong style="color:var(--text)">Earlier Career:</strong> Technical Consultant, FrontRange Solutions (2011-2013) | Technical Consultant, Prior Analytics (2007-2011).</p>
+
+</section>
+
+<!-- AWARDS & RECOGNITION -->
+<section class="cv-section">
+  <div class="cv-section-title">Awards &amp; Recognition</div>
+  <p style="font-size:0.8125rem;color:var(--text-2);line-height:1.8">Chairman's Club - Worldwide Top 100 | 3× Pre-Sales of the Year | 2× 100% Club</p>
+</section>
+
+<!-- EDUCATION & LEADERSHIP DEVELOPMENT -->
+<section class="cv-section">
+  <div class="cv-section-title">Education &amp; Leadership Development</div>
+  <p style="font-size:0.8125rem;color:var(--text);line-height:1.6"><strong>BSc (Hons) Computer Science</strong> - University of Reading</p>
+  <p style="font-size:0.75rem;color:var(--text-2);margin-top:0.375rem;line-height:1.6">CxO Engagement - Youd Andrews | Executive Leadership - ISDI | Accelerate Leadership Program | Value Selling, SPIN &amp; MEDDPICC</p>
+</section>
+
+<!-- CORE EXPERTISE -->
+<section class="cv-section" style="border-bottom:none">
+  <div class="cv-section-title">Core Expertise</div>
+  <p style="font-size:0.8125rem;color:var(--text-2);line-height:1.8">Strategic Solution Engineering | Global Accounts | Executive Engagement | AI Strategy | MEDDPICC | Value Selling | Enterprise Architecture | Solution Architecture | Salesforce Platform | CRM | SaaS | Complex Deal Strategy | Financial Services | Consumer Goods | Healthcare &amp; Life Sciences</p>
+  <p style="font-size:0.8125rem;color:var(--text-2);margin-top:0.375rem;line-height:1.8"><strong style="color:var(--accent)">Languages:</strong> English (Native) | French (B1)</p>
+</section>
+
+</div>
+
+
+<script>try{sessionStorage.setItem('lang','en')}catch(e){}</script>
+</body>
+</html>

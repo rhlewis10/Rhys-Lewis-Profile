@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rhys Lewis | Strategic Solution Engineer, Global Accounts. $55M+ de valeur contractuelle, 530+ transactions, 100+ engagements C-suite.">
+<meta property="og:title" content="Rhys Lewis | Impact de Carri&#232;re">
+<meta property="og:description" content="Strategic Solution Engineer | Global Accounts | Director-level Individual Contributor. $55M+ de valeur contractuelle dans les Services Financiers, Biens de Consommation et Sciences de la Vie.">
+<meta property="og:type" content="profile">
+<title>Rhys Lewis | Impact de Carri&#232;re</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --bg-subtle: #F8F9FB;
+  --bg-surface: #FFFFFF;
+  --border: #E2E5EA;
+  --border-light: #EEF0F3;
+  --text: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --accent: #0176D3;
+  --accent-deep: #014486;
+  --accent-bg: rgba(1, 118, 211, 0.06);
+  --gold: #B8860B;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --tk: -0.035em;
+  --t: -0.011em;
+  --xs: 0.5rem; --sm: 1rem; --md: 1.5rem; --lg: 2.5rem; --xl: 4rem; --2xl: 6rem;
+  --max: 1080px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;letter-spacing:var(--t);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--md);display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-brand{font-weight:700;font-size:.875rem;color:var(--text)}
+.nav-links{display:flex;gap:var(--md);align-items:center;list-style:none}
+.nav-links a{font-size:.8125rem;font-weight:500;color:var(--text-secondary);transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--text);text-decoration:none}
+.nav-cta{font-size:.8125rem;font-weight:600;color:#fff !important;background:var(--accent);padding:.375rem .875rem;border-radius:4px;transition:background .15s}
+.nav-cta:hover{background:var(--accent-deep);text-decoration:none !important}
+.nav-cv{font-size:.8125rem;font-weight:600;color:var(--text) !important;border:1px solid var(--border);padding:.375rem .875rem;border-radius:4px;transition:border-color .15s}
+.nav-cv:hover{border-color:var(--text-muted);text-decoration:none !important}
+
+/* LAYOUT */
+.c{max-width:var(--max);margin:0 auto;padding:0 var(--md)}
+section{padding:var(--2xl) 0}
+.sl{font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--lg)}
+
+/* HERO */
+.hero{padding:calc(52px + var(--lg)) 0 0}
+.hero-top{display:flex;align-items:center;gap:var(--lg);max-width:880px}
+.hero-text{flex:1}
+.hero-photo{width:140px;height:140px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--border)}
+.hero-name{font-size:clamp(2.25rem,5vw,3rem);font-weight:800;letter-spacing:var(--tk);line-height:1.05}
+.hero-role{font-size:1rem;color:var(--text-secondary);font-weight:500;margin-top:.375rem}
+.hero-stmt{font-size:.9375rem;color:var(--text-secondary);margin-top:var(--sm);line-height:1.6;max-width:680px}
+
+/* HERO METRICS — the most important visual on the page */
+.hero-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:var(--lg)}
+.hero-metric{padding:var(--lg) var(--md);text-align:center}
+.hero-metric-n{font-size:clamp(2.5rem,6vw,3.5rem);font-weight:800;letter-spacing:-0.04em;line-height:.9;color:var(--accent)}
+.hero-metric-l{font-size:.8125rem;font-weight:500;color:var(--text-secondary);margin-top:.375rem;line-height:1.3}
+
+/* SALESFORCE IMPACT LINE */
+.sf-line{padding:.75rem 0;border-bottom:1px solid var(--border);background:var(--bg-subtle)}
+.sf-line-in{text-align:center;font-size:.8125rem;color:var(--text-secondary)}
+.sf-line-in strong{font-weight:700;color:var(--text)}
+
+/* EXEC QUOTE */
+.eq{padding:var(--2xl) 0;background:var(--bg-subtle);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.eq-in{max-width:720px}
+.eq-m{font-size:3.5rem;line-height:.8;color:var(--accent);opacity:.3;font-weight:800}
+.eq-t{font-size:clamp(1.125rem,2.2vw,1.375rem);font-weight:500;line-height:1.55;color:var(--text);font-style:italic;margin-top:.25rem}
+.eq-a{margin-top:var(--md);display:flex;flex-direction:column;gap:.1rem}
+.eq-an{font-weight:700;font-size:.9375rem;color:var(--text)}
+.eq-at{font-size:.8125rem;color:var(--text-secondary)}
+.eq-ac{font-size:.8125rem;color:var(--text-muted)}
+
+/* WINS — hero win full width, two below */
+.win-hero{border:1px solid var(--border);border-top:3px solid var(--accent);padding:var(--lg) var(--xl);margin-bottom:var(--md)}
+.wins-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--md)}
+.win{border:1px solid var(--border);border-top:3px solid var(--accent);padding:var(--lg)}
+.win-val{font-size:1.375rem;font-weight:800;letter-spacing:var(--tk);color:var(--accent);line-height:1.2}
+.win-cust{font-size:.8125rem;font-weight:500;color:var(--text-secondary);margin-top:.25rem}
+.win-desc{font-size:.875rem;font-weight:500;color:var(--text);margin-top:var(--sm);line-height:1.5}
+.win-detail{font-size:.8125rem;color:var(--text-secondary);margin-top:.375rem}
+.win-mq{margin-top:var(--sm);padding-top:var(--sm);border-top:1px solid var(--border-light);font-size:.8125rem;color:var(--text-secondary);font-style:italic;line-height:1.5}
+.win-ms{font-style:normal;font-weight:600;color:var(--text-secondary);display:block;margin-top:.2rem}
+/* Case study expand */
+.win-expand{margin-top:var(--md);padding-top:var(--md);border-top:1px solid var(--border-light)}
+.win-expand summary{cursor:pointer;list-style:none}
+.win-expand summary::-webkit-details-marker{display:none}
+.win-expand summary::after{content:' \2193'}
+.win-expand[open] summary{color:var(--text-muted)}
+.win-expand[open] summary::after{content:' \2191'}
+.win-expand summary .when-closed{display:inline}
+.win-expand summary .when-open{display:none}
+.win-expand[open] summary .when-closed{display:none}
+.win-expand[open] summary .when-open{display:inline}
+.win-toggle{font-size:.75rem;font-weight:600;color:var(--accent);margin-top:var(--sm);display:inline-block}
+.win-beat{margin-bottom:var(--sm)}
+.win-beat:last-child{margin-bottom:0}
+.win-beat-label{font-size:.6875rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:.2rem}
+.win-beat-text{font-size:.875rem;color:var(--text-secondary);line-height:1.55}
+
+/* INDUSTRY TILES */
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.ind{background:var(--bg-surface);padding:var(--lg) var(--md)}
+.ind-name{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:.25rem}
+.ind-detail{font-size:.8125rem;color:var(--text-secondary);line-height:1.5}
+
+/* LEVERAGE — KPI + evidence */
+.lev-kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.lev-cell{padding:var(--lg) var(--md);text-align:center}
+.lev-n{font-size:clamp(1.75rem,3vw,2.25rem);font-weight:800;letter-spacing:var(--tk);color:var(--accent);line-height:1}
+.lev-l{font-size:.8125rem;color:var(--text-secondary);margin-top:.3rem;font-weight:500;line-height:1.3}
+.lev-evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--md);margin-top:var(--md)}
+.lev-ev{padding:var(--sm) var(--md);border-left:2px solid var(--border)}
+.lev-ev-title{font-size:.875rem;font-weight:700;color:var(--text)}
+.lev-ev-desc{font-size:.8125rem;color:var(--text-secondary);margin-top:.2rem;line-height:1.5}
+
+/* ACCOUNTS — visual portfolio */
+.acc-portfolio{display:flex;flex-wrap:wrap;gap:.625rem;margin-bottom:var(--sm)}
+.acc-name{font-size:.875rem;font-weight:600;color:var(--text);background:var(--bg-surface);padding:.5rem 1rem;border:1px solid var(--border);border-radius:3px;transition:border-color .15s}
+.acc-name:hover{border-color:var(--accent)}
+.acc-summary{font-size:.875rem;color:var(--text-secondary);line-height:1.6}
+
+/* HOW I OPERATE — fast cards */
+.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.op-card{background:var(--bg-surface);padding:var(--md)}
+.op-card-title{font-size:.875rem;font-weight:700;color:var(--accent);margin-bottom:.375rem}
+.op-card-desc{font-size:.8125rem;color:var(--text-secondary);line-height:1.5}
+
+/* ECOSYSTEM — compressed */
+.eco-row{margin-bottom:var(--md)}.eco-row:last-child{margin-bottom:0}
+.eco-label{font-size:.6875rem;font-weight:600;color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}
+.eco-items{font-size:.875rem;color:var(--text-secondary);line-height:1.6}
+
+/* TESTIMONIALS — 3 only */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--md)}
+.ti{padding:var(--md);border-left:2px solid var(--border)}
+.ti-text{font-size:.9375rem;color:var(--text-secondary);font-style:italic;line-height:1.6}
+.ti-src{font-size:.8125rem;font-weight:600;color:var(--text-secondary);margin-top:.375rem;font-style:normal}
+
+/* AWARDS — single ribbon */
+.awards-ribbon{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem var(--md);padding:var(--md) 0}
+.awards-ribbon-item{font-size:.875rem;font-weight:500;color:var(--text-secondary)}
+.awards-ribbon-item strong{font-weight:700;color:var(--text)}
+.awards-ribbon-gold{font-weight:700;color:var(--gold)}
+.awards-ribbon-sep{color:var(--border);font-size:.75rem}
+
+/* TIMELINE — visual, no bullets */
+.tl{position:relative;padding-left:2rem}
+.tl::before{content:'';position:absolute;left:5px;top:4px;bottom:4px;width:2px;background:var(--border)}
+.tl-i{position:relative;padding-bottom:var(--md)}.tl-i:last-child{padding-bottom:0}
+.tl-i::before{content:'';position:absolute;left:calc(-2rem + -1px);top:5px;width:12px;height:12px;background:var(--bg);border:2px solid var(--border);border-radius:50%;z-index:1}
+.tl-i.now::before{border-color:var(--accent);background:var(--accent)}
+.tl-yr{font-size:.75rem;font-weight:600;color:var(--text-secondary)}
+.tl-rl{font-size:.9375rem;font-weight:700;color:var(--text);margin-top:.1rem}
+.tl-co{font-size:.8125rem;font-weight:500;color:var(--text-secondary);margin-top:.1rem}
+.tl-sc{font-size:.8125rem;color:var(--text-secondary);margin-top:.2rem;line-height:1.5}
+
+/* CV */
+.cv-card{border:1px solid var(--border);padding:var(--lg) var(--xl);display:flex;align-items:center;justify-content:space-between;gap:var(--lg);background:var(--bg-surface)}
+.cv-info{display:flex;flex-direction:column;gap:.125rem}
+.cv-info-name{font-size:1rem;font-weight:700;color:var(--text)}
+.cv-info-meta{font-size:.8125rem;color:var(--text-secondary)}
+.cv-btns{display:flex;gap:.625rem}
+
+/* BUTTONS */
+.bp{display:inline-flex;align-items:center;padding:.625rem 1.25rem;background:var(--accent);color:#fff;font-weight:600;font-size:.875rem;border:none;border-radius:4px;cursor:pointer;transition:background .15s;font-family:var(--font)}
+.bp:hover{background:var(--accent-deep);color:#fff;text-decoration:none}
+.bs{display:inline-flex;align-items:center;padding:.625rem 1.25rem;background:transparent;color:var(--text);font-weight:600;font-size:.875rem;border:1px solid var(--border);border-radius:4px;cursor:pointer;transition:border-color .15s;font-family:var(--font)}
+.bs:hover{border-color:var(--text-muted);text-decoration:none}
+
+/* FOOTER */
+.footer{padding:var(--lg) 0;border-top:1px solid var(--border);text-align:center}
+.footer p{font-size:.75rem;color:var(--text-muted)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-photo{width:80px;height:80px}
+  .hero-metrics{grid-template-columns:repeat(2,1fr)}
+  .ind-grid{grid-template-columns:1fr}
+  .wins-grid{grid-template-columns:1fr}
+  .op-grid{grid-template-columns:1fr}
+  .lev-kpi{grid-template-columns:repeat(2,1fr)}
+  .lev-evidence{grid-template-columns:1fr}
+  .tg{grid-template-columns:1fr}
+  .cv-card{flex-direction:column;align-items:flex-start}
+  .nav-links{display:none}
+  section{padding:var(--xl) 0}
+}
+@media(max-width:480px){
+  .hero-metrics{grid-template-columns:repeat(2,1fr)}
+  .lev-kpi{grid-template-columns:1fr}
+}
+
+/* PRINT */
+@media print{
+  @page{size:A4;margin:1.2cm 1.5cm}
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+  body{font-size:9.5pt;line-height:1.5}
+  .nav,.cv-btns,.cv-card,.lang-toggle,.footer,.mobile-bar{display:none !important}
+  .rv{opacity:1 !important;transform:none !important;transition:none !important}
+  .c{max-width:100%;padding:0}
+  section{padding:.75rem 0;break-inside:avoid}
+  .hero{padding-top:0;padding-bottom:.5rem}
+  .hero-name{font-size:20pt}
+  .hero-role{font-size:9pt}
+  .hero-stmt{font-size:8.5pt;margin-top:.3rem}
+  .hero-metrics{margin-top:.75rem;border:1px solid #ddd}
+  .hero-metric{padding:.5rem .4rem}
+  .hero-metric-n{font-size:18pt}
+  .hero-metric-l{font-size:7pt}
+  .sf-line{display:block !important;position:static;padding:.3rem 0;border:none;background:none;box-shadow:none}
+  .sf-line-in{text-align:left;font-size:8pt}
+  .eq{padding:.75rem 0;background:none !important;border:none !important}
+  .eq-in{max-width:100%}
+  .eq-m{font-size:20pt}
+  .eq-t{font-size:10pt}
+  .win-hero{padding:.6rem .75rem;margin-bottom:.5rem}
+  .win{padding:.6rem .75rem}
+  .win-val{font-size:11pt}
+  .win-desc{font-size:8pt}
+  .win-detail{font-size:7.5pt}
+  .win-mq{font-size:7.5pt}
+  .ind-grid{break-inside:avoid}
+  .ind{padding:.5rem .6rem}
+  .ind-name{font-size:9pt}
+  .ind-detail{font-size:7.5pt}
+  .lev-kpi{break-inside:avoid}
+  .lev-cell{padding:.5rem .4rem}
+  .lev-n{font-size:14pt}
+  .lev-l{font-size:7pt}
+  .lev-evidence{break-inside:avoid}
+  .lev-ev{padding:.3rem .5rem}
+  .lev-ev-title{font-size:8.5pt}
+  .lev-ev-desc{font-size:7.5pt}
+  .op-grid{break-inside:avoid}
+  .op-card{padding:.4rem .5rem}
+  .op-card-title{font-size:8.5pt}
+  .op-card-desc{font-size:7.5pt}
+  .eco-label{font-size:6.5pt}
+  .eco-items{font-size:8pt}
+  .tg{break-inside:avoid}
+  .ti{padding:.4rem .5rem}
+  .ti-text{font-size:8pt}
+  .ti-src{font-size:7pt}
+  .awards-ribbon{justify-content:flex-start;padding:.4rem 0}
+  .awards-ribbon-gold{font-size:8.5pt}
+  .awards-ribbon-item{font-size:8pt}
+  .awards-ribbon-sep{font-size:7pt}
+  .tl-yr{font-size:7pt}
+  .tl-rl{font-size:8.5pt}
+  .tl-co{font-size:7.5pt}
+  .tl-sc{font-size:7.5pt}
+  .tl-i{padding-bottom:.5rem}
+  .sl{font-size:6.5pt;margin-bottom:.5rem}
+
+  /* Case studies — force open in print */
+  .win-expand{display:block !important}
+  .win-expand summary{display:none}
+
+  /* Page breaks — force sensible breaks */
+  #quote{break-before:avoid}
+  #wins{break-before:avoid}
+  #industry{break-before:page}
+  #career{break-before:page}
+}
+
+/* MOBILE BAR */
+.mobile-bar{display:none}
+@media(max-width:768px){
+  .mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:.5rem var(--md);justify-content:center;gap:var(--sm);align-items:center}
+  .mobile-bar a{font-size:.75rem;font-weight:600;color:var(--text-secondary);padding:.375rem .75rem;border-radius:4px}
+  .mobile-bar .mb-cta{background:var(--accent);color:#fff !important}
+  .mobile-bar .mb-lang{font-size:.6875rem;color:var(--text-muted)}
+  .mobile-bar .mb-lang.active{color:var(--accent)}
+  body{padding-bottom:3.5rem}
+}
+
+/* LANGUAGE TOGGLE */
+.lang-toggle{display:flex;align-items:center;gap:.125rem;margin-left:.5rem}
+.lang-toggle a{font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:3px;color:var(--text-muted);transition:color .15s,background .15s}
+.lang-toggle a:hover{color:var(--text);text-decoration:none}
+.lang-toggle a.active{color:var(--accent);background:var(--accent-bg)}
+.lang-toggle .sep{font-size:.75rem;color:var(--border);user-select:none}
+
+/* REVEAL */
+html.js .rv{opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
+html.js .rv.v{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="nav-brand">Rhys Lewis</div>
+    <ul class="nav-links">
+      <li><a href="#wins">R&#233;sultats</a></li>
+      <li><a href="#leverage">Impact</a></li>
+      <li><a href="#operate">Leadership</a></li>
+      <li><a href="#career">Carri&#232;re</a></li>
+      <li><a href="cv-fr.html" class="nav-cv">Voir CV</a></li>
+      <li><a href="#" class="nav-cta" onclick="window.print();return false;">PDF</a></li>
+      <li><a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" class="nav-cv" style="padding:.25rem .625rem">LinkedIn</a></li>
+      <li><div class="lang-toggle"><a href="index.html">EN</a><span class="sep">|</span><a href="index-fr.html" class="active">FR</a></div></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== 1. HERO + BIG NUMBERS ========== -->
+<section class="hero" id="hero">
+  <div class="c">
+    <div class="hero-top">
+      <div class="hero-text">
+        <h1 class="hero-name">Rhys Lewis</h1>
+        <p class="hero-role">Strategic Solution Engineer | Global Accounts | Director-level Individual Contributor</p>
+        <p class="hero-stmt">Strategic Solution Engineer de niveau Directeur, reliant la strat&#233;gie de transformation ex&#233;cutive &#224; la technologie d&#8217;entreprise et &#224; l&#8217;ex&#233;cution de transactions complexes dans les secteurs des Services Financiers, des Biens de Consommation et des Sciences de la Vie.</p>
+      </div>
+      <img src="photo.png" alt="Rhys Lewis" class="hero-photo">
+    </div>
+    <div class="hero-metrics">
+      <div class="hero-metric">
+        <div class="hero-metric-n">$55M+</div>
+        <div class="hero-metric-l">Valeur Contractuelle Annuelle Sign&#233;e</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hero-metric-n">$45M+</div>
+        <div class="hero-metric-l">Revenus Services</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hero-metric-n">530+</div>
+        <div class="hero-metric-l">Transactions</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hero-metric-n">100+</div>
+        <div class="hero-metric-l">Engagements C-suite</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sf-line">
+  <div class="c">
+    <p class="sf-line-in"><strong>Impact Salesforce :</strong> 35 M$+ Valeur Contractuelle Annuelle Sign&#233;e · 30 M$+ Services · 330+ Transactions · <span style="color:var(--gold);font-weight:700">Chairman&#8217;s Club</span></p>
+  </div>
+</div>
+
+<!-- ========== 2. CUSTOMER QUOTE ========== -->
+<section class="eq" id="quote">
+  <div class="c">
+    <div class="eq-in rv">
+      <div class="eq-m">&ldquo;</div>
+      <blockquote class="eq-t">He can just as easily present strategic visions to [the US CEO] or on end-to-end supply chain to [the Chief Supply Chain Officer], but at the same time being a sparring partner for Global IT. Rhys embodies the 'new' Salesforce, thinking with us on how to make our business better.</blockquote>
+      <div class="eq-a">
+        <span class="eq-an">Directeur IT</span>
+        <span class="eq-at">Leader mondial des biens de consommation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 3. BIGGEST WINS (3, not 4) ========== -->
+<section id="wins">
+  <div class="c">
+    <h2 class="sl rv">R&#233;sultats Majeurs</h2>
+    <div class="win-hero rv">
+      <div class="win-val">Accord Entreprise de 25 M$</div>
+      <div class="win-cust">Marque mondiale de biens de consommation</div>
+      <p class="win-desc">D&#8217;un compte en difficult&#233; &#224; un succ&#232;s strat&#233;gique. Direction d&#8217;une strat&#233;gie de repositionnement et de renouvellement sur deux ans, reconstruction du sponsoring ex&#233;cutif et transformation de la relation client de push &#224; pull.</p>
+      <p class="win-detail">5,1 M$ Valeur Contractuelle Annuelle · 11 M$ Services · Engagement CEO &amp; C-suite</p>
+      <div class="win-mq">"This will clearly help deliver my sales force transformation. Thank you... Can I have it now?"<span class="win-ms">PDG US &amp; Membre du Conseil, leader mondial des biens de consommation</span></div>
+      <details class="win-expand">
+        <summary class="win-toggle"><span class="when-closed">Lire l&#8217;histoire compl&#232;te</span><span class="when-open">Fermer</span></summary>
+        <div class="win-beat">
+          <div class="win-beat-label">Situation</div>
+          <div class="win-beat-text">Reprise d&#8217;un compte sous-performant dont l&#8217;impl&#233;mentation initiale n&#8217;avait pas r&#233;pondu aux attentes. L&#8217;engagement ex&#233;cutif &#233;tait au point mort et la strat&#233;gie plateforme &#233;tait centr&#233;e sur la personnalisation plut&#244;t que sur l&#8217;innovation.</div>
+        </div>
+        <div class="win-beat">
+          <div class="win-beat-label">Mon action</div>
+          <div class="win-beat-text">Mise en place d&#8217;une strat&#233;gie de repositionnement et de renouvellement sur deux ans. Reconstruction de l&#8217;engagement ex&#233;cutif en recentrant la conversation du co&#251;t vers la valeur. &#201;laboration d&#8217;un nouveau narratif de solution reliant les capacit&#233;s de la plateforme aux priorit&#233;s de transformation front office et de portail de commerce digital du client. Animation de revues d&#8217;architecture en parall&#232;le de sessions de business case ex&#233;cutif.</div>
+        </div>
+        <div class="win-beat">
+          <div class="win-beat-label">Parties prenantes</div>
+          <div class="win-beat-text">PDG US et membre du Conseil d&#8217;Administration, Chief Supply Chain Officer, direction IT mondiale, et une &#233;quipe interne couvrant 5+ fonctions incluant avant-vente, produit, services, cr&#233;atif et alliances partenaires.</div>
+        </div>
+        <div class="win-beat">
+          <div class="win-beat-label">R&#233;sultat</div>
+          <div class="win-beat-text">Accord entreprise de 25 M$ sign&#233;. 5,1 M$ de valeur contractuelle annuelle, 11 M$ de revenus services. Transformation du compte en un partenariat strat&#233;gique significatif.</div>
+        </div>
+      </details>
+    </div>
+    <div class="wins-grid rv">
+      <div class="win">
+        <div class="win-val">5,5 M$ Valeur Contractuelle Annuelle</div>
+        <div class="win-cust">Marque mondiale de nutrition animale</div>
+        <p class="win-desc">Activation C-suite pour une transformation tangible de l&#8217;entreprise. Direction de la strat&#233;gie d&#8217;engagement ex&#233;cutif pour s&#233;curiser l&#8217;engagement d&#8217;investissement.</p>
+        <p class="win-detail">12 M$ Services · Sponsoring ex&#233;cutif de la d&#233;couverte &#224; la cl&#244;ture</p>
+        <details class="win-expand">
+          <summary class="win-toggle"><span class="when-closed">En savoir plus</span><span class="when-open">Fermer</span></summary>
+          <div class="win-beat">
+            <div class="win-beat-label">Situation</div>
+            <div class="win-beat-text">Engagement ex&#233;cutif en phase initiale o&#249; le client avait besoin d&#8217;un business case de transformation clair pour obtenir l&#8217;investissement de la C-suite.</div>
+          </div>
+          <div class="win-beat">
+            <div class="win-beat-label">Mon action</div>
+            <div class="win-beat-text">Direction de la strat&#233;gie d&#8217;engagement ex&#233;cutif, construction du narratif de valeur et de la feuille de route de transformation de la phase 0 jusqu&#8217;&#224; la d&#233;cision d&#8217;investissement. Connexion des capacit&#233;s de la plateforme aux priorit&#233;s de transformation du client.</div>
+          </div>
+          <div class="win-beat">
+            <div class="win-beat-label">Parties prenantes</div>
+            <div class="win-beat-text">Direction C-suite, parties prenantes du si&#232;ge et pr&#233;sidents europ&#233;ens. Alignement de multiples d&#233;cideurs au sein d&#8217;une structure internationale complexe.</div>
+          </div>
+          <div class="win-beat">
+            <div class="win-beat-label">R&#233;sultat</div>
+            <div class="win-beat-text">5,5 M$ de valeur contractuelle annuelle obtenue, 12 M$ de revenus services. Sponsoring ex&#233;cutif maintenu de la d&#233;couverte &#224; la cl&#244;ture.</div>
+          </div>
+        </details>
+      </div>
+      <div class="win">
+        <div class="win-val">4 M$ Croissance du Compte</div>
+        <div class="win-cust">Entreprise mondiale agroalimentaire</div>
+        <p class="win-desc">Croissance de 4 M$ sur le compte gr&#226;ce &#224; un engagement strat&#233;gique sur un compte international complexe.</p>
+        <p class="win-detail">Navigation internationale · Alignement multi-parties prenantes</p>
+        <details class="win-expand">
+          <summary class="win-toggle"><span class="when-closed">En savoir plus</span><span class="when-open">Fermer</span></summary>
+          <div class="win-beat">
+            <div class="win-beat-label">Situation</div>
+            <div class="win-beat-text">Compte international complexe avec des priorit&#233;s concurrentes entre les unit&#233;s r&#233;gionales et l&#8217;IT central. Aucune vision align&#233;e de la strat&#233;gie plateforme.</div>
+          </div>
+          <div class="win-beat">
+            <div class="win-beat-label">Mon action</div>
+            <div class="win-beat-text">Accompagnement de l&#8217;IT central dans la pr&#233;sentation des capacit&#233;s de la plateforme aux unit&#233;s m&#233;tier, comblant le foss&#233; entre la strat&#233;gie technologique centrale et les priorit&#233;s commerciales r&#233;gionales. &#201;vang&#233;lisation post-vente pour garantir le succ&#232;s, stimuler la consommation de licences et d&#233;bloquer la croissance future.</div>
+          </div>
+          <div class="win-beat">
+            <div class="win-beat-label">Parties prenantes</div>
+            <div class="win-beat-text">Responsables d&#8217;unit&#233;s m&#233;tier locales et direction IT mondiale. Alignement de parties prenantes concurrentes autour d&#8217;un dossier commun d&#8217;investissement plateforme.</div>
+          </div>
+          <div class="win-beat">
+            <div class="win-beat-label">R&#233;sultat</div>
+            <div class="win-beat-text">Croissance de 4 M$ de valeur contractuelle annuelle. &#201;tablissement d&#8217;une strat&#233;gie plateforme align&#233;e entre les r&#233;gions, stimulant la consommation de licences et les investissements futurs.</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. INDUSTRY LEADERSHIP ========== -->
+<section id="industry" style="background:var(--bg-subtle);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="c">
+    <h2 class="sl rv">Leadership Sectoriel</h2>
+    <div class="ind-grid rv">
+      <div class="ind">
+        <div class="ind-name">Biens de Consommation</div>
+        <div style="font-size:.75rem;font-weight:600;color:var(--accent);margin-bottom:.5rem">Leadership Go-to-Market</div>
+        <div class="ind-detail">Cr&#233;ation de strat&#233;gies commerciales sectorielles, de cadres de valeur et de programmes d&#8217;accompagnement adopt&#233;s par les &#233;quipes Enterprise.</div>
+      </div>
+      <div class="ind">
+        <div class="ind-name">Sant&#233; &amp; Sciences de la Vie</div>
+        <div style="font-size:.75rem;font-weight:600;color:var(--accent);margin-bottom:.5rem">Comptes Strat&#233;giques</div>
+        <div class="ind-detail">Direction de strat&#233;gies de solutions complexes pour des organisations pharmaceutiques et de sant&#233; mondiales dans des environnements r&#233;glement&#233;s.</div>
+      </div>
+      <div class="ind">
+        <div class="ind-name">Services Financiers</div>
+        <div style="font-size:.75rem;font-weight:600;color:var(--accent);margin-bottom:.5rem">Global Accounts</div>
+        <div class="ind-detail">Focus actuel. Direction de la strat&#233;gie de solutions sur les relations bancaires et d&#8217;assurance les plus strat&#233;giques de Salesforce.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5. ORGANISATIONAL MULTIPLIER ========== -->
+<section id="leverage">
+  <div class="c">
+    <h2 class="sl rv">Impact Organisationnel</h2>
+    <div class="lev-kpi rv">
+      <div class="lev-cell">
+        <div class="lev-n">Global</div>
+        <div class="lev-l">Adoption mondiale des ressources</div>
+      </div>
+      <div class="lev-cell">
+        <div class="lev-n">20 M$+</div>
+        <div class="lev-l">Pipeline influenc&#233; par les ressources d'accompagnement</div>
+      </div>
+      <div class="lev-cell">
+        <div class="lev-n">5+</div>
+        <div class="lev-l">Fonctions orchestr&#233;es dans les transactions strat&#233;giques</div>
+      </div>
+    </div>
+    <div class="lev-evidence rv">
+      <div class="lev-ev">
+        <div class="lev-ev-title">Cadre de Valeur</div>
+        <div class="lev-ev-desc">Cr&#233;&#233; et d&#233;ploy&#233; aupr&#232;s des Regional VPs, Account Executives, Solution Engineers et Business Development. Adopt&#233; comme rythme go-to-market pour l&#8217;Enterprise.</div>
+      </div>
+      <div class="lev-ev">
+        <div class="lev-ev-title">Orchestration Transversale</div>
+        <div class="lev-ev-desc">Constitution d&#8217;&#233;quipes projet combinant Architecture, Solution Engineering, Industry, Services, Cr&#233;atif, Alliances Partenaires et Product Management &#224; l&#8217;&#233;chelle mondiale.</div>
+      </div>
+      <div class="lev-ev">
+        <div class="lev-ev-title">Partenariat Produit &amp; IA</div>
+        <div class="lev-ev-desc">Strat&#233;gie produit Consumer Goods Cloud, accompagnement IA et Agentforce, 6 sessions de formation Account Executive et Business Development.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. HOW I OPERATE (fast cards) ========== -->
+<section id="operate">
+  <div class="c">
+    <h2 class="sl rv">Mon Approche</h2>
+    <div class="op-grid rv">
+      <div class="op-card">
+        <div class="op-card-title">Influence Ex&#233;cutive</div>
+        <div class="op-card-desc">Traduire la technologie en d&#233;cisions d&#8217;investissement au niveau du conseil d&#8217;administration. 100+ engagements C-suite aupr&#232;s de CEOs, CIOs et Chief Supply Chain Officers.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-card-title">Leadership de Transactions Strat&#233;giques</div>
+        <div class="op-card-desc">Piloter des opportunit&#233;s strat&#233;giques mondiales complexes de la d&#233;couverte &#224; la cl&#244;ture, en orchestrant des &#233;quipes transversales &#224; l&#8217;international.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-card-title">Cr&#233;dibilit&#233; Technique</div>
+        <div class="op-card-desc">Op&#233;rer de l&#8217;architecture d&#8217;entreprise au business case ex&#233;cutif, construisant la cr&#233;dibilit&#233; aux deux extr&#233;mit&#233;s du cycle de vente.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-card-title">Leadership Transversal</div>
+        <div class="op-card-desc">Orchestrer Ventes, Produit, Services, Architecture et Partenaires &#224; travers 5+ fonctions par transaction strat&#233;gique.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-card-title">Sponsoring Interne</div>
+        <div class="op-card-desc">Cr&#233;er des sponsors internes chez le client qui maintiennent l&#8217;&#233;lan commercial tout au long d&#8217;un processus d&#8217;achat complexe.</div>
+      </div>
+      <div class="op-card">
+        <div class="op-card-title">Rigueur Commerciale</div>
+        <div class="op-card-desc">Appliquer MEDDPICC et la vente par la valeur dans des groupes d&#8217;achat complexes et multi-parties prenantes au sein d&#8217;industries r&#233;glement&#233;es.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 8. TESTIMONIALS (3 supporting) ========== -->
+<section id="recognition">
+  <div class="c">
+    <h2 class="sl rv">T&#233;moignages</h2>
+    <div class="tg rv">
+      <div class="ti">
+        <p class="ti-text">"Rhys has a natural flair for connecting the dots to create an easy view of big picture. He is both thoughtful and pragmatic, focussed on what individuals need and how organisations work to create tailored solutions that offer meaningful impact."</p>
+        <p class="ti-src">Dannii Portsmouth FCIPD, SVP Chief People Officer EMEA, PepsiCo</p>
+      </div>
+      <div class="ti">
+        <p class="ti-text">"Rhys is the consummate value-based Presales executive. He has a relentless focus on the customer and the unique ability to rapidly create credibility. He truly leads by example and innovates every single day."</p>
+        <p class="ti-src">Jeff Hess, COO, CATALIS</p>
+      </div>
+      <div class="ti">
+        <p class="ti-text">"He has something that's genuinely difficult to find at this level: the technical credibility to earn trust and the commercial instincts to shape how a customer thinks about an investment decision."</p>
+        <p class="ti-src">Jean-Baptiste Graire, Head of Revenue &amp; Partnerships, EasyPicky</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 9. AWARDS (single ribbon) ========== -->
+<div style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-subtle)">
+  <div class="c">
+    <h2 class="sl rv" style="margin-bottom:0;padding-top:var(--md)">Distinctions</h2>
+    <div class="awards-ribbon rv">
+      <span class="awards-ribbon-gold">Chairman&#8217;s Club, Top 100 Mondial</span>
+      <span class="awards-ribbon-sep">|</span>
+      <span class="awards-ribbon-item"><strong>3&#215;</strong> Pre-Sales of the Year</span>
+      <span class="awards-ribbon-sep">|</span>
+      <span class="awards-ribbon-item"><strong>2&#215;</strong> 100% Club</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 10. CAREER (visual timeline, no bullets) ========== -->
+<section id="career">
+  <div class="c">
+    <h2 class="sl rv">Parcours</h2>
+    <div class="tl rv">
+      <div class="tl-i now">
+        <div class="tl-yr">2026–Pr&#233;sent</div>
+        <div class="tl-rl">Strategic Solution Engineer | Global Accounts | Insurance</div>
+        <div class="tl-co">Salesforce | Services Financiers</div>
+        <div class="tl-sc">Transition vers les Services Financiers et l&#8217;Assurance pour diriger la strat&#233;gie de solutions sur les relations les plus strat&#233;giques de Salesforce dans le secteur.</div>
+        <div class="tl-sc" style="color:var(--text-secondary);margin-top:.25rem">P&#233;rim&#232;tre : Global Accounts · Engagement C-suite · Architecture d&#8217;entreprise · MEDDPICC</div>
+      </div>
+      <div class="tl-i">
+        <div class="tl-yr">2022–2026</div>
+        <div class="tl-rl">Strategic Solution Engineer | Strategic Accounts</div>
+        <div class="tl-co">Salesforce | Biens de Consommation | Sant&#233; &amp; Sciences de la Vie</div>
+        <div class="tl-sc">Global Solution Engineer sur quatre comptes strat&#233;giques.</div>
+        <div class="tl-sc" style="color:var(--text-secondary);margin-top:.25rem">Impact : Succ&#232;s de redressement &#224; 25 M$ · Engagements C-suite</div>
+      </div>
+      <div class="tl-i">
+        <div class="tl-yr">2018–2022</div>
+        <div class="tl-rl">Principal Presales Consultant</div>
+        <div class="tl-co">Salesforce | Biens de Consommation</div>
+        <div class="tl-sc">Cr&#233;ation de strat&#233;gies go-to-market et de cadres de valeur adopt&#233;s par les &#233;quipes Enterprise.</div>
+        <div class="tl-sc" style="color:var(--text-secondary);margin-top:.25rem">Impact : 20 M$+ pipeline qualifi&#233; · 60+ personnes accompagn&#233;es</div>
+      </div>
+      <div class="tl-i">
+        <div class="tl-yr">2013–2018</div>
+        <div class="tl-rl">Pre-Sales Consultant &#8594; Principal Strategic Accounts Lead</div>
+        <div class="tl-co">BMC Software</div>
+        <div class="tl-sc" style="color:var(--text-secondary);margin-top:.25rem">Impact : 20 M$+ ACV couvert · 14 M$ revenus de nouvelles licences · 200+ transactions · 3 promotions</div>
+      </div>
+      <div class="tl-i">
+        <div class="tl-yr">2007–2013</div>
+        <div class="tl-rl">Conseil en Technologie d&#8217;Entreprise</div>
+        <div class="tl-co">FrontRange Solutions / Prior Analytics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section style="padding:var(--md) 0">
+  <div class="c">
+    <p style="font-size:.8125rem;color:var(--text-secondary)"><strong style="color:var(--text)">Langues :</strong> Anglais (Langue maternelle) · Fran&#231;ais (B1)</p>
+  </div>
+</section>
+
+<!-- ========== 11. CV ========== -->
+<section id="cv" style="padding:var(--xl) 0">
+  <div class="c">
+    <div class="cv-card rv">
+      <div class="cv-info">
+        <span class="cv-info-name">Rhys Lewis | Curriculum Vitae</span>
+        <span class="cv-info-meta">19 ans dans la technologie d&#8217;entreprise | Services Financiers | Biens de Consommation | Sant&#233; &amp; Sciences de la Vie</span>
+      </div>
+      <div class="cv-btns">
+        <a href="cv-fr.html" class="bp" target="_blank">Voir CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="mobile-bar"><a href="cv-fr.html">Voir CV</a><a href="#" onclick="window.print();return false;">PDF</a><a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" class="mb-cta">LinkedIn</a><a href="index.html" class="mb-lang">EN</a><span style="color:var(--border);font-size:.6875rem">|</span><a href="index-fr.html" class="mb-lang active">FR</a></div>
+
+<footer class="footer"><div class="c"><p>Rhys Lewis | Impact de Carri&#232;re</p></div></footer>
+<div class="print-footer" style="display:none">Rhys Lewis | Impact de Carri&#232;re</div>
+<style>@media print{.print-footer{display:block !important;position:fixed;bottom:0;left:0;right:0;text-align:center;font-size:7pt;color:#94A3B8;padding:.3cm 0}}</style>
+
+<script>
+(function(){
+  'use strict';
+  document.documentElement.classList.add('js');
+  /* Mark that user is on FR — prevents EN page from redirecting back */
+  try{sessionStorage.setItem('lang','fr')}catch(e){}
+  var els=document.querySelectorAll('.rv');
+  var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(function(el){ro.observe(el)});
+  var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.nav-links a:not(.nav-cta):not(.nav-cv)');
+  var no=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var id=e.target.getAttribute('id');links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+id)})}})},{threshold:.2,rootMargin:'-60px 0px -50% 0px'});
+  secs.forEach(function(s){no.observe(s)});
+  /* Open all case studies before print, close after */
+  window.addEventListener('beforeprint',function(){document.querySelectorAll('.win-expand').forEach(function(d){d.setAttribute('open','')})});
+  window.addEventListener('afterprint',function(){document.querySelectorAll('.win-expand').forEach(function(d){d.removeAttribute('open')})});
+})();
+</script>
+</body>
+</html>
