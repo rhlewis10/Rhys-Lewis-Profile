@@ -41,10 +41,11 @@
       ]
     }
   ],
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/fr",
-      "destination": "/index-fr.html"
+      "source": "/index-fr",
+      "destination": "/fr",
+      "permanent": true
     }
   ]
 }
