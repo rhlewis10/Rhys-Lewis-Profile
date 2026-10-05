@@ -48,6 +48,11 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .nav-cta:hover{background:var(--accent-deep);text-decoration:none !important}
 .nav-cv{font-size:.8125rem;font-weight:600;color:var(--text) !important;border:1px solid var(--border);padding:.375rem .875rem;border-radius:4px;transition:border-color .15s}
 .nav-cv:hover{border-color:var(--text-muted);text-decoration:none !important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto}
+.hamburger span{display:block;width:20px;height:2px;background:var(--text);border-radius:1px;transition:transform .2s,opacity .2s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
 /* LAYOUT */
 .c{max-width:var(--max);margin:0 auto;padding:0 var(--md)}
@@ -196,9 +201,11 @@ section{padding:var(--2xl) 0}
   .lev-evidence{grid-template-columns:1fr}
   .tg{grid-template-columns:1fr}
   .cv-card{flex-direction:column;align-items:flex-start}
-  .nav-links{display:none}
-  .mobile-bar{top:0;bottom:auto;border-top:none;border-bottom:1px solid var(--border)}
-  .hero{padding-top:calc(52px + var(--lg) + 2.5rem)}
+  .nav-links{display:none;position:fixed;top:52px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);flex-direction:column;padding:var(--md);gap:var(--sm);border-bottom:1px solid var(--border);box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:.9375rem;padding:.5rem 0}
+  .nav-links .lang-toggle{margin-top:.5rem}
+  .hamburger{display:flex}
   section{padding:var(--xl) 0}
 }
 @media(max-width:480px){
@@ -211,7 +218,7 @@ section{padding:var(--2xl) 0}
   @page{size:A4;margin:1.2cm 1.5cm}
   *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
   body{font-size:9.5pt;line-height:1.5}
-  .nav,.cv-btns,.cv-card,.lang-toggle,.footer,.mobile-bar{display:none !important}
+  .nav,.cv-btns,.cv-card,.lang-toggle,.footer,.hamburger{display:none !important}
   .rv{opacity:1 !important;transform:none !important;transition:none !important}
   .c{max-width:100%;padding:0}
   section{padding:.75rem 0;break-inside:avoid}
@@ -279,17 +286,6 @@ section{padding:var(--2xl) 0}
   #career{break-before:page}
 }
 
-/* MOBILE BAR */
-.mobile-bar{display:none}
-@media(max-width:768px){
-  .mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:.5rem var(--md);justify-content:center;gap:var(--sm);align-items:center}
-  .mobile-bar a{font-size:.75rem;font-weight:600;color:var(--text-secondary);padding:.375rem .75rem;border-radius:4px}
-  .mobile-bar .mb-cta{background:var(--accent);color:#fff !important}
-  .mobile-bar .mb-lang{font-size:.6875rem;color:var(--text-muted)}
-  .mobile-bar .mb-lang.active{color:var(--accent)}
-  body{padding-top:3rem}
-}
-
 /* LANGUAGE TOGGLE */
 .lang-toggle{display:flex;align-items:center;gap:.125rem;margin-left:.5rem}
 .lang-toggle a{font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:3px;color:var(--text-muted);transition:color .15s,background .15s}
@@ -308,6 +304,9 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
 <nav class="nav">
   <div class="nav-in">
     <div class="nav-brand">Rhys Lewis</div>
+    <div class="hamburger" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
     <ul class="nav-links">
       <li><a href="#wins">R&#233;sultats</a></li>
       <li><a href="#leverage">Impact</a></li>
@@ -649,8 +648,6 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
   </div>
 </section>
 
-<div class="mobile-bar"><a href="cv-fr.html">Voir CV</a><a href="#" onclick="window.print();return false;">PDF</a><a href="https://www.linkedin.com/in/rhyshlewis" target="_blank" class="mb-cta">LinkedIn</a><a href="index.html" class="mb-lang">EN</a><span style="color:var(--border);font-size:.6875rem">|</span><a href="index-fr.html" class="mb-lang active">FR</a></div>
-
 <footer class="footer"><div class="c"><p>Rhys Lewis | Impact de Carri&#232;re</p></div></footer>
 <div class="print-footer" style="display:none">Rhys Lewis | Impact de Carri&#232;re</div>
 <style>@media print{.print-footer{display:block !important;position:fixed;bottom:0;left:0;right:0;text-align:center;font-size:7pt;color:#94A3B8;padding:.3cm 0}}</style>
@@ -667,6 +664,8 @@ html.js .rv.v{opacity:1;transform:translateY(0)}
   var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.nav-links a:not(.nav-cta):not(.nav-cv)');
   var no=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var id=e.target.getAttribute('id');links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+id)})}})},{threshold:.2,rootMargin:'-60px 0px -50% 0px'});
   secs.forEach(function(s){no.observe(s)});
+  /* Close hamburger menu on nav link click */
+  document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.hamburger').classList.remove('open');document.querySelector('.nav-links').classList.remove('open')})});
   /* Open all case studies before print, close after */
   window.addEventListener('beforeprint',function(){document.querySelectorAll('.win-expand').forEach(function(d){d.setAttribute('open','')})});
   window.addEventListener('afterprint',function(){document.querySelectorAll('.win-expand').forEach(function(d){d.removeAttribute('open')})});
