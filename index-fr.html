@@ -187,7 +187,7 @@ section{padding:var(--2xl) 0}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .hero-photo{width:80px;height:80px}
+  .hero-photo{display:none}
   .hero-metrics{grid-template-columns:repeat(2,1fr)}
   .ind-grid{grid-template-columns:1fr}
   .wins-grid{grid-template-columns:1fr}
@@ -197,6 +197,8 @@ section{padding:var(--2xl) 0}
   .tg{grid-template-columns:1fr}
   .cv-card{flex-direction:column;align-items:flex-start}
   .nav-links{display:none}
+  .mobile-bar{top:0;bottom:auto;border-top:none;border-bottom:1px solid var(--border)}
+  .hero{padding-top:calc(52px + var(--lg) + 2.5rem)}
   section{padding:var(--xl) 0}
 }
 @media(max-width:480px){
@@ -285,7 +287,7 @@ section{padding:var(--2xl) 0}
   .mobile-bar .mb-cta{background:var(--accent);color:#fff !important}
   .mobile-bar .mb-lang{font-size:.6875rem;color:var(--text-muted)}
   .mobile-bar .mb-lang.active{color:var(--accent)}
-  body{padding-bottom:3.5rem}
+  body{padding-top:3rem}
 }
 
 /* LANGUAGE TOGGLE */
